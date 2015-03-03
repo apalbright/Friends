@@ -1,5 +1,5 @@
 # tld-friends
-Data, latex code, and R scripts for "The One With All The Quantifiable Friendships" (found at: http://thelittledataset.com/2015/01/20/the-one-with-all-the-quantifiable-friendships/)
+Raw data, tex code, and R scripts for "The One With All The Quantifiable Friendships" (found at: http://thelittledataset.com/2015/01/20/the-one-with-all-the-quantifiable-friendships/)
 
 #Tikz viz
 In order to make the multi-colored tikz visualization from this post, use the "tikznetwork" latex code.
