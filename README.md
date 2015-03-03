@@ -5,4 +5,19 @@ Data, latex code, and R scripts for "The One With All The Quantifiable Friendshi
 In order to make the multi-colored tikz visualization from this post, use the "tikznetwork" latex code.
 
 #R viz
-in order to make the R visualization found under «Quick visualization update #2,» run the "Rnetwork" R script. 
+In order to make the R visualization found under «Quick visualization update #2,» run the "Rnetwork" R script. 
+
+#Data fun
+If you'd just like to play around with the data yourself, download the csv file from the raw_data folder.
+Quick explanatory stuff: 
+There are columns for episode season, episode number (within the season), episode name, and dynamics (which is the same thing as a character grouping in a plotline). There are a few rows for each episode of the show since each episode has a few different plotlines.
+
+The episode dynamics are just numbers. The six friends are defined as follows:
+Chandler=1
+Joey=2
+Monica=3
+Phoebe=4
+Rachel=5
+Ross=6
+
+So, 236 is a plotline made up of Joey, Monica, and Ross while 56 is a Rachel-Ross plotline. Pretty easy to interpret!
