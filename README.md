@@ -7,6 +7,9 @@ In order to make the multi-colored tikz visualization from this post, use the "t
 #R viz
 In order to make the R visualization found under «Quick visualization update #2,» run the "Rnetwork" R script. 
 
+#R Packages Needed
+You'll need to install the network package to run this the R script.
+
 #Data fun
 If you'd just like to play around with the data yourself, download the csv file from the raw_data folder.
 Quick explanatory stuff: 
