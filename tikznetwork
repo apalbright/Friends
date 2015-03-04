@@ -1,4 +1,3 @@
-#tikz viz
 \documentclass{article}
 
 \usepackage[latin1]{inputenc}
@@ -24,7 +23,6 @@ placement has been used to avoid placing nodes explicitly. This feature was
 introduced in PGF/TikZ >= 1.09.
 
 .. [1] Bossley, K.; Brown, M. & Harris, C. Neurofuzzy identification of an autonomous underwater vehicle `International Journal of Systems Science`, 1999, 30, 901-913 
-
 
 \end{comment}
 
@@ -190,3 +188,6 @@ introduced in PGF/TikZ >= 1.09.
 
      
 \end{tikzpicture}
+
+
+\end{document}
