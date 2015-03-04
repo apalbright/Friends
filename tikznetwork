@@ -11,25 +11,8 @@
 \setlength\PreviewBorder{5pt}%
 %%%>
 
-\begin{comment}
-:Title: Simple flow chart
-:Tags: Diagrams
-
-With PGF/TikZ you can draw flow charts with relative ease. This flow chart from [1]_
-outlines an algorithm for identifying the parameters of an autonomous underwater vehicle model. 
-
-Note that relative node
-placement has been used to avoid placing nodes explicitly. This feature was
-introduced in PGF/TikZ >= 1.09.
-
-.. [1] Bossley, K.; Brown, M. & Harris, C. Neurofuzzy identification of an autonomous underwater vehicle `International Journal of Systems Science`, 1999, 30, 901-913 
-
-\end{comment}
-
-
 \begin{document}
 \pagestyle{empty}
-
 
 % Define block styles
 \tikzstyle{decision} = [diamond, draw, fill=blue!20, 
@@ -186,8 +169,6 @@ introduced in PGF/TikZ >= 1.09.
     (ross) to node[auto, swap]  [near end] {12}(mon6); 
     
 
-     
 \end{tikzpicture}
-
 
 \end{document}
