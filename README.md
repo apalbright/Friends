@@ -5,7 +5,7 @@ Raw data, tex code, and R scripts for "The One With All The Quantifiable Friends
 In order to make the multi-colored tikz visualization from this post, run the "tikznetwork" latex code.
 
 #R viz
-In order to make the R visualization found under «Quick visualization update #2,» run the "Rnetwork" R script. 
+In order to make the R visualization found in the visualization update, run the "Rnetwork" R script. 
 
 #R Packages Needed
 You'll need to install the network package to run this the R script.
