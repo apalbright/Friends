@@ -1,0 +1,185 @@
+\documentclass{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+%%%<
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}%
+%%%>
+
+\begin{comment}
+
+
+.. [1] Bossley, K.; Brown, M. & Harris, C. Neurofuzzy identification of an autonomous underwater vehicle `International Journal of Systems Science`, 1999, 30, 901-913 
+
+\end{comment}
+
+
+\begin{document}
+\pagestyle{empty}
+
+
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=orange!50, 
+    text width=5em, text centered, rounded corners, minimum height=4em, node distance=7cm]
+    \tikzstyle{block1} = [rectangle, draw, fill=teal!50, 
+    text width=5em, text centered, rounded corners, minimum height=4em, node distance=7cm]
+    \tikzstyle{block2} = [rectangle, draw, fill=red!50, 
+    text width=5em, text centered, rounded corners, minimum height=4em, node distance=7cm]
+    \tikzstyle{block3} = [rectangle, draw, fill=yellow!50, 
+    text width=5em, text centered, rounded corners, minimum height=4em, node distance=7cm]
+    \tikzstyle{block4} = [rectangle, draw, fill=pink!50, 
+    text width=5em, text centered, rounded corners, minimum height=4em, node distance=7cm]
+    \tikzstyle{block5} = [rectangle, draw, fill=blue!40, 
+    text width=5em, text centered, rounded corners, minimum height=4em, node distance=7cm]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=7cm,
+    minimum height=3.5em, text width=4.5em, text centered]
+   \tikzstyle{cloud1} = [draw, ellipse,fill=orange!50, node distance=3cm,
+    minimum height=2em]
+       \tikzstyle{cloud2} = [draw, ellipse,fill=teal!50, node distance=3cm,
+    minimum height=2em]
+       \tikzstyle{cloud3} = [draw, ellipse,fill=red!50, node distance=3cm,
+    minimum height=2em]
+       \tikzstyle{cloud4} = [draw, ellipse,fill=yellow!50, node distance=3cm,
+    minimum height=2em]
+       \tikzstyle{cloud5} = [draw, ellipse,fill=pink!50, node distance=3cm,
+    minimum height=2em]
+       \tikzstyle{cloud6} = [draw, ellipse,fill=blue!40, node distance=3cm,
+    minimum height=2em]
+    
+\begin{tikzpicture}[node distance = 5cm, auto]
+    % Place nodes
+    \node [block] (ch) {Chandler};
+    \node [block1, right of=ch] (joe) {Joey};
+    \node [block2, right of=joe] (mon) {Monica};
+    \node [block3, right of=mon] (ph) {Phoebe};
+    \node [block4, right of=ph] (rach) {Rachel};
+    \node [block5, right of=rach] (ross) {Ross};
+    
+    %below ch%
+    \node [cloud3, below of=ch] (mon1) {Monica};
+    \node [cloud2, below of=mon1] (joe1) {Joey};
+    \node [cloud6, below of=joe1] (ross1) {Ross};
+    \node [cloud5, below of=ross1] (rach1) {Rachel};
+    \node [cloud4, below of=rach1] (ph1) {Phoebe};
+
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (ch) to node[auto, swap]  [near end]{94}(mon1); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (ch) to node[auto, swap] [near end]{69}(joe1); 
+          \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (ch) to node[auto, swap]  [near end]{25}(ross1); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (ch) to node[auto, swap]  [near end]{20}(rach1); 
+    \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (ch) to node[auto, swap] [near end] {16}(ph1); 
+    
+    %below joe%
+     \node [cloud1, below of=joe] (ch2) {Chandler};
+    \node [cloud5, below of=ch2] (rach2) {Rachel};
+    \node [cloud4, below of=rach2] (ph2) {Phoebe};
+       \node [cloud3, below of=ph2] (mon2) {Monica};
+    \node [cloud6, below of=mon2] (ross2) {Ross};
+ 
+
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (joe) to node[auto, swap]  [near end]{27}(mon2); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (joe) to node[auto, swap]  [near end]{69}(ch2); 
+          \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (joe) to node[auto, swap]  [near end]{26}(ross2); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (joe) to node[auto, swap]  [near end]{40}(rach2); 
+    \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (joe) to node[auto, swap]  [near end] {28}(ph2); 
+    
+    %below mon%
+    
+     \node [cloud1, below of=mon] (ch3) {Chandler};
+    \node [cloud4, below of=ch3] (ph3) {Phoebe};
+    \node [cloud5, below of=ph3] (rach3) {Rachel};
+    \node [cloud2, below of=rach3] (joe3) {Joey};
+    \node [cloud6, below of=joe3] (ross3) {Ross};
+
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (mon) to node[auto, swap]  [near end]{27}(joe3); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (mon) to node[auto, swap]  [near end]{94}(ch3); 
+          \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (mon) to node[auto, swap]  [near end]{12}(ross3); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (mon) to node[auto, swap]  [near end]{33}(rach3); 
+    \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (mon) to node[auto, swap]  [near end] {40}(ph3); 
+    
+    
+    %below ph%
+        \node [cloud3, below of=ph] (mon4) {Monica};
+    \node [cloud5, below of=mon4] (rach4) {Rachel};
+         \node [cloud2, below of=rach4] (joe4) {Joey};
+    \node [cloud6, below of=joe4] (ross4) {Ross};
+    \node [cloud1, below of=ross4] (ch4) {Chandler};
+
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (ph) to node[auto, swap]  [near end]{28}(joe4); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (ph) to node[auto, swap]  [near end]{16}(ch4); 
+          \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (ph) to node[auto, swap]  [near end]{20}(ross4); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (ph) to node[auto, swap]  [near end]{35}(rach4); 
+    \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (ph) to node[auto, swap]  [near end] {40}(mon4); 
+    
+    %below rach%
+    
+    
+       \node [cloud6, below of=rach] (ross5) {Ross};
+    \node [cloud2, below of=ross5] (joe5) {Joey};
+    \node [cloud4, below of=joe5] (ph5) {Phoebe};
+    \node [cloud3, below of=ph5] (mon5) {Monica};
+    \node [cloud1, below of=mon5] (ch5) {Chandler};
+
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (rach) to node[auto, swap]  [near end]{40}(joe5); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (rach) to node[auto, swap]  [near end]{20}(ch5); 
+          \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (rach) to node[auto, swap]  [near end]{81}(ross5); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (rach) to node[auto, swap]  [near end]{35}(ph5); 
+    \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (rach) to node[auto, swap]  [near end] {33}(mon5); 
+    
+    %below ross%
+    
+      \node [cloud5, below of=ross] (rach6) {Rachel};
+    \node [cloud2, below of=rach6] (joe6) {Joey};
+     \node [cloud1, below of=joe6] (ch6) {Chandler};
+    \node [cloud4, below of=ch6] (ph6) {Phoebe};
+    \node [cloud3, below of=ph6] (mon6) {Monica};
+
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (ross) to node[auto, swap]  [near end]{26}(joe6); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (ross) to node[auto, swap]  [near end]{25}(ch6); 
+          \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (ross) to node[auto, swap]  [near end]{81}(rach6); 
+      \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend left=45, thick, dashed] 
+    (ross) to node[auto, swap]  [near end]{20}(ph6); 
+    \draw[->, >=latex', shorten >=2pt, shorten <=2pt, bend right=45, thick, dashed] 
+    (ross) to node[auto, swap]  [near end] {12}(mon6); 
+    
+
+     
+\end{tikzpicture}
+
+
+\end{document}
